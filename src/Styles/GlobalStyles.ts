@@ -27,4 +27,22 @@ export default createGlobalStyle`
     ::-webkit-scrollbar-thumb {
         background: rgba(0, 0, 0, 0.6);
     }
+
+    /**
+    *   Paleta de Cores
+    */
+
+    :root {
+        --color-notify: '#D61C4E';
+        --color-border-avatar: '#00D7FF';
+        --color-logged: '#3EC70B';
+        --color-no-logged: '#990000';
+        
+        /* --dark: '#2C3333';
+        --side: '#395B64';
+        --light: '#E7F6F2';
+        side-Light: '#A5C9CA'; */
+    }
+
+    
 `;
