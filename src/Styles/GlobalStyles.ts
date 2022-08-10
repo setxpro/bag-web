@@ -31,12 +31,15 @@ export default createGlobalStyle`
     /**
     *   Paleta de Cores
     */
-
     :root {
-        --color-notify: '#D61C4E';
-        --color-border-avatar: '#00D7FF';
-        --color-logged: '#3EC70B';
-        --color-no-logged: '#990000';
+        --color-notify: #D61C4E;
+        --color-border: #00D7FF;
+        --color-logged: #3EC70B;
+        --color-no-logged: #990000;
+        --color-error-message: #f00;
+        --color-border-login: #3B9AE1;
+        --color-border-input: #3333;
+        --color-btn: #3B9AE1;
         
         /* --dark: '#2C3333';
         --side: '#395B64';
