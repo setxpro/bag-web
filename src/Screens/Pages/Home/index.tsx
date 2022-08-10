@@ -1,11 +1,12 @@
 import React from 'react';
+import Title from '../../../Components/TitlePages';
 
 import { Container } from './styles';
 
 const HomeScreen: React.FC = () => {
   return (
     <Container>
-        <h1>Private Page</h1><button>Logout</button>
+        <Title text='Home Page'/><button>Logout</button>
     </Container>
   );
 }

@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
 import { Button } from '../../../../Components/Button';
-import { Input } from '../../../../Components/Inputs';
-import { Link } from 'react-router-dom';
+import { Input } from '../../../../Components/InputsSingin';
+import { Link, useNavigate } from 'react-router-dom';
 
 import * as C from './styles';
 import { MsgSystem } from '../../../../Components/MsgSystem';
+import { useAuth } from '../../../../Hooks/useAuth';
 
 const FormLogin: React.FC = () => {
 
+    const { signin, message, setMessage } = useAuth();
+    const navigate = useNavigate();
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [message, setMessage] = useState('');
 
     const handleSubmit = (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         ev.preventDefault();
+        let user = username;
+        let pass = password;
 
         if (!username) {
             setMessage('Por favor, insira ao menos um login.');
@@ -25,6 +30,10 @@ const FormLogin: React.FC = () => {
             return;
         }
         
+        if (user && pass) {
+            signin(user, pass)
+            navigate('/');
+        }
     }
 
     return (
@@ -41,7 +50,7 @@ const FormLogin: React.FC = () => {
                 </C.FormContent>
             </C.ContentFormArea>
             <C.FormFooter>
-                <p>@ Copyright <a href="">BAGAGGIO</a> 2022</p>
+                <p>© Copyright <a href="">BAGAGGIO</a> 2022</p>
             </C.FormFooter>
         </C.Container>
     );
