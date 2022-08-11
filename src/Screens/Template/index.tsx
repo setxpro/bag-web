@@ -1,19 +1,24 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Header from '../../Components/Header';
+import Mobile from '../../Components/Menu/Mobile';
 import Sidebar from '../../Components/Sidebar';
+import { HeaderProvider } from '../../Contexts/Header';
 
 import * as C from './styles';
 
 const Template = ( { children } : { children : ReactNode } ) => {
   return (
     <C.Container>
-      <C.ContentSidebar>
+        <HeaderProvider>
+      <Mobile/>
           <Sidebar/>
-      </C.ContentSidebar>
         <C.Content>
           <Header/>
-          {children}
+          <C.ContentMain>
+              {children}
+          </C.ContentMain>
         </C.Content>
+        </HeaderProvider>
     </C.Container>
   );
 }

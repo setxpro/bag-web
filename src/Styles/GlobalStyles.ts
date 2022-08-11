@@ -16,19 +16,6 @@ export default createGlobalStyle`
     }
 
     /**
-    *   Estilos da Scrollbar
-    */
-    ::-webkit-scrollbar {
-        width: 4px;
-    }
-    ::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.2);
-    }
-    ::-webkit-scrollbar-thumb {
-        background: rgba(0, 0, 0, 0.6);
-    }
-
-    /**
     *   Paleta de Cores
     */
     :root {

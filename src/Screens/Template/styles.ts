@@ -1,14 +1,26 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background: lightblue;
     height: 100vh;
-
     display: flex;
 `;
-export const ContentSidebar = styled.div`
-    width: 299px;
-`;
+
 export const Content = styled.div`
     width: 100%;
+`;
+export const ContentMain = styled.div`
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    overflow-y: auto;
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #9999;
+    }
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
 `;

@@ -1,13 +1,24 @@
 import React from 'react';
 import Title from '../../../Components/TitlePages';
 
-import { Container } from './styles';
+import * as C from './styles';
 
 const HomeScreen: React.FC = () => {
   return (
-    <Container>
-        <Title text='Home Page'/><button>Logout</button>
-    </Container>
+    <C.Container>
+        <C.AreaTitle>
+          <Title text='Home Page'/>
+        </C.AreaTitle>
+        <C.Content>
+            <h2>Container 1</h2>
+        </C.Content>
+        <C.Content>
+        <h2>Container 2</h2>
+        </C.Content>
+        <C.Content>
+        <h2>Container 3</h2>
+        </C.Content>
+    </C.Container>
   );
 }
 
