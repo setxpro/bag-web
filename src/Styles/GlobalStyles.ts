@@ -20,18 +20,13 @@ export default createGlobalStyle`
     */
     :root {
         --color-notify: #D61C4E;
-        --color-border: #065785;
+        --color-border: #FFF;
         --color-logged: #3EC70B;
         --color-no-logged: #990000;
         --color-error-message: #f00;
         --color-border-login: #3B9AE1;
         --color-border-input: #3333;
         --color-btn: #3B9AE1;
-        
-        /* --dark: '#2C3333';
-        --side: '#395B64';
-        --light: '#E7F6F2';
-        side-Light: '#A5C9CA'; */
     }
 
     

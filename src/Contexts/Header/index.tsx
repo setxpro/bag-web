@@ -5,6 +5,8 @@ export const HeaderContext = createContext({} as HeaderType);
 
 export const HeaderProvider = ( { children } : { children : ReactNode } ) => {
 
+    
+
     const [openMenuPc, setOpenMenuPc] = useState(false);
     const [openMenuMobile, setOpenMenuMobile] = useState(false);
 

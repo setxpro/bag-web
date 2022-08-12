@@ -5,7 +5,8 @@ export const Container = styled.div<{wrapper: boolean}>`
     height: 100vh;
     overflow: hidden;
     transition: all 1s ease;
-    background: #283046;
+    /* background: #283046; */
+    background: ${props => props.theme.colors.sidebar};
 
     @media (max-width: 800px) {
         display: none;

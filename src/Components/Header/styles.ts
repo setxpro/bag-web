@@ -6,7 +6,9 @@ import { MdOutlineLightMode } from 'react-icons/md';
 export const Container = styled.div`
   height: 70px;
   width: 100%;
-  background: #000;
+
+  transition: all 1s ease;
+  background: ${props => props.theme.colors.nav};
 
   display: flex;
   align-items: center;
@@ -16,29 +18,26 @@ export const Container = styled.div`
     @media (max-width: 800px) {
       border-bottom: 1px solid #9999;
     }
-
-  .mobile {
-    display: none;
-    @media (max-width: 800px) {
-      display: inline;
-    }
-  }
-  .pc {
-    @media (max-width: 800px) {
-      display: none;
-    }
-  }
-
-  .mobile, .pc {
-    background: transparent;
-    border: none;
-  }
 `;
 
 export const BarsIcon = styled(FaBars)`
   font-size: 1.3rem;
   color: #fff;
   cursor: pointer;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+`;
+export const BarsMobileIcon = styled(FaBars)`
+  font-size: 1.3rem;
+  color: #fff;
+  cursor: pointer;
+
+    display: none;
+    @media (max-width: 800px) {
+      display: inline;
+    }
 `;
 export const NotifyIcon = styled(IoNotificationsOutline)`
   font-size: 1.5rem;
@@ -52,9 +51,14 @@ export const LightIcon = styled(MdOutlineLightMode)`
 `;
 
 export const ContentLeftArea = styled.div`
+  flex: 2.5;
 
+  @media (max-width: 600px) {
+    flex: 1;
+  }
 `;
 export const ContentMiddleArea = styled.div`
+  flex: 2;
   h1 {
     color: #FFFF;
   }
@@ -78,7 +82,6 @@ export const ContentAreaNameAndAvatar = styled.div`
   gap: .5rem;
 `;
 export const ContentName = styled.div`
-
     h2,h4 {
       color: #eee;
     }
@@ -119,7 +122,8 @@ export const ContentAvatar = styled.div<{ status : boolean }>`
         border-radius: 50%;
         background: ${props => props.status ? 'var(--color-logged)' : 'var(--color-no-logged)'};
 
-        border: 3px solid #000;
+        border: 3px solid ${props => props.theme.colors.nav};
+        transition: all 1s ease;
 
         position: absolute;
         right: 0;

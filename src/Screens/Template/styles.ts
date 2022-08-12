@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div`
     height: 100vh;
     display: flex;
+    transition: all 1s ease;
+    background: ${props => props.theme.colors.main};
 `;
 
 export const Content = styled.div`

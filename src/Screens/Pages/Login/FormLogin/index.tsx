@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '../../../../Components/Button';
+import { Button } from '../../../../Components/Button/BtnForm';
 import { Input } from '../../../../Components/InputsSingin';
 import { Link, useNavigate } from 'react-router-dom';
 

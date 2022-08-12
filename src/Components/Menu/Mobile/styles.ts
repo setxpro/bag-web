@@ -14,7 +14,7 @@ export const Container = styled.div<{wrapper: boolean}>`
     transition: all 1s ease;
     width: ${props => props.wrapper ? '245px' : '0px'};
     overflow: hidden;
-    background: #22222f;
+    background: ${props => props.theme.colors.sideMobile};
 
     position: absolute;
     left: 0;
@@ -40,9 +40,35 @@ export const HeaderMenuMobile = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    
+    h2 {
+        transition: all 1s ease;
+        color: ${props => props.theme.colors.text};
+    }
+
     button {
         background: transparent;
         border: none;
+    }
+`;
+
+export const ContentMenu = styled.div`
+`;
+export const Nav = styled.nav`
+`;
+export const Ul = styled.ul`
+    display: flex;
+    flex-direction: column;
+
+    a {
+        text-decoration: none;
+        transition: all 1s ease;
+        color: ${props => props.theme.colors.text};
+        padding: 1rem 1rem;
+
+        font-size: 1.4em;
+
+        &:hover, &:active, &:focus {
+            background: rgba(0, 255, 0, .1);
+        }
     }
 `;

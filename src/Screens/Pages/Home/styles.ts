@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    background: #161D31;
     padding-bottom: 10px;
-
 `;
 
 export const AreaTitle = styled.div`
@@ -17,7 +15,8 @@ export const AreaTitle = styled.div`
 export const Content = styled.div`
     width: 98%;
     height: 100vh;
-    background: #283046;
+    transition: all 1s ease;
+    background: ${props => props.theme.colors.sidebar};
     margin: auto;
     border-radius: 4px;
     margin-bottom: 10px;
