@@ -16,7 +16,7 @@ export const AreaTitle = styled.div`
 `; 
 export const Content = styled.div`
     width: 98%;
-    height: 300px;
+    height: 100vh;
     background: #283046;
     margin: auto;
     border-radius: 4px;

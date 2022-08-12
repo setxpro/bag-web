@@ -6,7 +6,7 @@ import { MdOutlineLightMode } from 'react-icons/md';
 export const Container = styled.div`
   height: 70px;
   width: 100%;
-  background: #22222f;
+  background: #000;
 
   display: flex;
   align-items: center;
@@ -41,12 +41,12 @@ export const BarsIcon = styled(FaBars)`
   cursor: pointer;
 `;
 export const NotifyIcon = styled(IoNotificationsOutline)`
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
 `;
 export const LightIcon = styled(MdOutlineLightMode)`
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #fff;
   cursor: pointer;
 `;
@@ -56,7 +56,7 @@ export const ContentLeftArea = styled.div`
 `;
 export const ContentMiddleArea = styled.div`
   h1 {
-    color: #EEE;
+    color: #FFFF;
   }
 `;
 export const ContentRight = styled.div`
@@ -97,7 +97,7 @@ export const ContentName = styled.div`
     }
 `;
 
-export const ContentAvatar = styled.div`
+export const ContentAvatar = styled.div<{ status : boolean }>`
 
     > div {
 
@@ -117,9 +117,9 @@ export const ContentAvatar = styled.div`
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        background: var(--color-logged);
+        background: ${props => props.status ? 'var(--color-logged)' : 'var(--color-no-logged)'};
 
-        border: 2px solid #22222f;
+        border: 3px solid #000;
 
         position: absolute;
         right: 0;

@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHeader } from '../../Hooks/useHeader';
 
 import * as C from './styles';
+import { useState } from 'react';
 
 const Header: React.FC = () => {
 
   const { wrapperMenuMobile, wrapperMenuPc } = useHeader();
+
+  const [isLogged, setIsLogged] = useState(true); // Toggle color to user offline
 
   return (
     <C.Container>
@@ -22,7 +25,7 @@ const Header: React.FC = () => {
               <h2>Patrick Anjos</h2>
               <h4>Developer</h4>
           </C.ContentName>
-            <C.ContentAvatar><div><img src="https://github.com/setxpro.png" alt='avatar'/></div></C.ContentAvatar>
+            <C.ContentAvatar status={isLogged}><div><img src="https://github.com/setxpro.png" alt='avatar'/></div></C.ContentAvatar>
         </C.ContentAreaNameAndAvatar>
       </C.ContentRight>
     </C.Container>

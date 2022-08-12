@@ -20,7 +20,7 @@ export default createGlobalStyle`
     */
     :root {
         --color-notify: #D61C4E;
-        --color-border: #00D7FF;
+        --color-border: #065785;
         --color-logged: #3EC70B;
         --color-no-logged: #990000;
         --color-error-message: #f00;

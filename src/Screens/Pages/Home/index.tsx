@@ -12,12 +12,6 @@ const HomeScreen: React.FC = () => {
         <C.Content>
             <h2>Container 1</h2>
         </C.Content>
-        <C.Content>
-        <h2>Container 2</h2>
-        </C.Content>
-        <C.Content>
-        <h2>Container 3</h2>
-        </C.Content>
     </C.Container>
   );
 }
