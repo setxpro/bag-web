@@ -28,6 +28,15 @@ export const FormContent = styled.form`
     border-top: 10px solid var(--color-border-login);
     border-bottom: 10px solid var(--color-border-login);
 
+    .mask {
+        padding: 1rem;
+        border-radius: 4px;
+        border: 1px solid var(--color-border-input);
+        outline: none;
+        background: transparent;
+        font-size: 1.2em;
+    }
+
     @media (max-width: 600px) {
         border: 0;
     }

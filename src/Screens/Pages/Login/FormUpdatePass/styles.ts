@@ -3,6 +3,18 @@ import styled from 'styled-components';
 export const Container = styled.div`
    height: 100vh;
    background: #FFF;
+
+   .message {
+    text-align: center;
+    font-size: 1rem;
+    a {
+        text-decoration: none;
+            strong {
+                color: #00f;
+                text-decoration: underline;
+            }
+    }
+   }
 `;
 
 export const ContentFormArea = styled.form`

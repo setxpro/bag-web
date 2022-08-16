@@ -38,14 +38,17 @@ const FormLogin: React.FC = () => {
 
     return (
         <C.Container>
+            <C.ContentTitleArea>
+                <h1>BAGWEB</h1>
+            </C.ContentTitleArea>
             <C.ContentFormArea>
                 <C.FormContent>
                     <MsgSystem text={message}/>
                     <Input type='text' name="username" placeholder='Username' value={username} onChange={e =>[setUsername(e.target.value), setMessage('')]}/>
                     <Input type='password' name="password" placeholder='Password' value={password} onChange={e => [setPassword(e.target.value), setMessage('')]}/>
                     <C.ContentBtns>
-                        <Button onClick={handleSubmit} title='Logar no Bagweb'/>
-                        <Link to="">Esqueceu sua senha ?</Link>
+                        <Button onClick={handleSubmit} title='Entrar'/>
+                        <Link to="/forgot-pass">Esqueceu sua senha ?</Link>
                     </C.ContentBtns>
                 </C.FormContent>
             </C.ContentFormArea>
